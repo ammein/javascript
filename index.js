@@ -1,3 +1,5 @@
+
+
 var points = [25, 16, 7, 9, 31];
 var first = points[4]; // calling an element in first row
 console.log(first);
@@ -152,4 +154,73 @@ function count(x) {
   return numbers;
 }
     console.log(x);
-    
+
+
+// Objects
+var myObj1 = new Object();
+myObj1.Car = "Ford";
+myObj1.Year = 2010;
+myObj1.Model = "Mustang";
+myObj1.cost = 50000;
+myObj1.cost = 2000;
+console.log(myObj1);
+
+var myself = new Object();
+
+myself.Name = "Amin";
+myself.Gender = "Male";
+myself.Age = 23;
+myself.Ambition = "Web Developer / UI UX Designer / Web Designer";
+console.log(myself);
+
+
+var myObj2 = { Car : "honda" , Year:2017, Model:"Toyota" };
+console.log(myObj2);
+
+var myObj3 = new myFun("Toyota" , 2015, "Corolla" , 40000);
+console.log(myObj3);
+
+function myFun(a,b,c,d) {
+    this.Car = a;
+    this.Year = b;
+    this.Model = c;
+    this.Cost = d;
+}
+
+console.log(myObj1["Car"]);
+console.log(myObj2.Car);
+
+
+// Introduction to functions
+function myFun(argA , argB) {
+    var myRet = argA + " " + argB;
+    return("you passed" + myRet);
+}
+
+console.log (myFun(" Hello " ,1));
+myFun(" World" , 2);
+myFun(" Hi" , 3);
+myFun(" Boo" ,4);
+myFun(" Woo" ,5);
+
+
+// DOM
+document.getElementById("btn1").addEventListener("click" , function() {
+    alert("hello again again");
+});
+
+console.dir(document);
+
+// Accessing DOM
+// ID pull
+var myOutput = document.getElementById("output");
+console.dir(myOutput);
+
+myOutput.innerHTML = "New Content";
+
+
+// Class pull (Accessing DOM)
+
+var myBtn = document.getElementsByClassName("btn1");
+
+console.dir(myBtn);
