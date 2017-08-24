@@ -153,9 +153,6 @@ function count(x) {
     }
     return numbers;
 }
-<<<<<<< HEAD
-console.log(x);
-=======
     console.log(x);
 
 
@@ -208,18 +205,18 @@ myFun(" Woo" ,5);
 
 
 // DOM
-document.getElementById("btn1").addEventListener("click" , function() {
-    alert("hello again again");
-});
-
-console.dir(document);
-
+//document.getElementById("btn1").addEventListener("click" , function() {
+//    alert("hello again again");
+//});
+//
+//console.dir(document);
+//
 // Accessing DOM
 // ID pull
-var myOutput = document.getElementById("output");
-console.dir(myOutput);
-
-myOutput.innerHTML = "New Content";
+//var myOutput = document.getElementById("output");
+//console.dir(myOutput);
+//
+//myOutput.innerHTML = "New Content";
 
 
 // Class pull (Accessing DOM)
@@ -227,3 +224,55 @@ myOutput.innerHTML = "New Content";
 var myBtn = document.getElementsByClassName("btn1");
 
 console.dir(myBtn);
+
+window.onload = function () {
+    var myBtn2 = document.getElementById("btn2");
+    var myOutput = document.getElementById("output");
+    myBtn2.onclick = myFun;
+    //myBtn2.addEventListener("mouseover", myFun);
+    var clicked = document.getElementById("form");
+    var outputClicked = [];
+
+
+}
+
+
+//console.dir(document);
+//console.log(document.URL + " " + document.title);
+//
+//myOutput.innerHTML = "NEW CONTENT";
+//myOutput.style.color = "blue";
+//myOutput.style.backgroundColor = "purple";
+//myImg = document.getElementById("myImage");
+//
+//var myBtn = document.getElementsByClassName("btn");
+//myBtn[1].innerText = "NEW<BR> BUTTON";
+//console.dir(myBtn[1]);
+//
+//document.getElementById("btn1").addEventListener("click", function () {
+//    myImg.src = "http://lorempixel.com/100/200";
+//    this.innerHTML = "Clicked";
+//    this.style.backgroundColor = "yellow";
+//})
+
+
+// Javascript Element selection plus
+var myEl = document.querySelectorAll(".btn , li");
+console.log(myEl);
+
+for (i = 0; i<myEl.length; i++) {
+    myEl[i].addEventListener("click" , allFun);
+}
+
+function allFun() {
+    this.style.backgroundColor = "pink";
+}
+
+
+// Create new elements using Javascript
+var myEle = document.createElement("h1");
+var myContent = document.createTextNode("New element");
+var myOutput = document.getElementById("output");
+
+myEle.appendChild(myContent);
+myOutput.appendChild(myEle);
