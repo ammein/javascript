@@ -227,4 +227,3 @@ myOutput.innerHTML = "New Content";
 var myBtn = document.getElementsByClassName("btn1");
 
 console.dir(myBtn);
->>>>>>> ab16dc2090506cad83d9579a35b76ea50f8ad494
