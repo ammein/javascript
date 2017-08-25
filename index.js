@@ -284,8 +284,9 @@
 
 
 // Javascript Operators dynamic updates
-var a = 0;
-var b = a++;
+'use strict';
+var kosong = 0;
+var tambah = kosong++;
 
 var output = document.getElementById("output");
 var btn1 = document.getElementById('btn1');
@@ -293,12 +294,12 @@ var btn2 = document.getElementById('btn2');
 
 
 btn1.onclick = function() {
-    a = a + 1;
-    output.innerHTML = b + a;
+    kosong = kosong + 1;
+    output.innerHTML = tambah + kosong;
 }
 btn2.onclick = function() {
-    a--;
-    output.innerHTML = b + a;
+    kosong--;
+    output.innerHTML = tambah + kosong;
 }
 
 var c = false;
@@ -362,19 +363,21 @@ console.log(cat || dog); //return top string line of code (NOT value)
 //    output.innerHTML = a; // Math.floor (Rounded Numbers)
 //};
 
-// ParseInt Method
-var output = document.getElementById("outputText");
+// ParseInt Method (Change the number into integer)
+var output2 = document.getElementById("outputText");
 var a = "My Output <br>";
-
+var b = 3;
 document.getElementById("btn").onclick = function() {
     var myVal = document.getElementById("myVal").value;
     console.log("Gets Input");
-    if (myVal >= b){
+    myVal = parseInt(myVal);
+    console.log("Begin parseInt");
+    if (myVal > b){
         console.log("Greater than b value");
         a = a + "myVal is Greater than b<br>";
     }
     a = a + "myVal is " + myVal + "<br>";
     a = a + "b is " + myVal + "<br>";
-    a = a + Math.ceil(Math.random()*100) + "<br>";
-    output.innerHTML = a; // Math.floor (Rounded Numbers)
+    a = a + Math.ceil(Math.random()*50) + "<br>";
+    output2.innerHTML = a; // Math.floor (Rounded Numbers)
 };
