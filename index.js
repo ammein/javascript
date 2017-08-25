@@ -329,24 +329,52 @@ console.log(cat || dog); //return top string line of code (NOT value)
 
 
 // Javascript Looping
-var textOutput = document.getElementById("outputText");
-var a = 1 ;
-
-document.getElementById("btn").addEventListener("click" , function(){
-    var myVal = document.getElementById("numA").value;
-    if (myVal=="red" || myVal == a){
-        myVal = "Wow its red or equal to the value of a :)";
-    } else {
-        myVal = "Are you sure you are not entering 'red' instead of " + "'" + myVal + "'" + "? <br>";
-    }
-//    var i = 0;
-//    while (i<=5){
-//        myVal = myVal + i + ". again ! <br>";
-//        i++;
+//var textOutput = document.getElementById("outputText");
+//var a = 1 ;
+//
+//document.getElementById("btn").addEventListener("click" , function(){
+//    var myVal = document.getElementById("numA").value;
+//    if (myVal=="red" || myVal == a){
+//        myVal = "Wow its red or equal to the value of a :)";
+//    } else {
+//        myVal = "Are you sure you are not entering 'red' instead of " + "'" + myVal + "'" + "? <br>";
 //    }
-    
-    for(i=0; i<5 ; i++){
-        myVal += i + ". Repeat me <br>";
-        textOutput.innerHTML = myVal;
+////    var i = 0;
+////    while (i<=5){
+////        myVal = myVal + i + ". again ! <br>";
+////        i++;
+////    }
+//    
+//    for(i=0; i<5 ; i++){
+//        myVal += i + ". Repeat me <br>";
+//        textOutput.innerHTML = myVal;
+//    }
+//});
+
+// Javascript Method Math
+//var output = document.getElementById("outputText");
+//var a = "My Output <br>";
+//
+//document.getElementById("btn").onclick = function() {
+//    var myVal = document.getElementById("myVal").value;
+//    a = a + "myVal is " + myVal + "<br>";
+//    a = a + Math.ceil(Math.random()*100) + "<br>";
+//    output.innerHTML = a; // Math.floor (Rounded Numbers)
+//};
+
+// ParseInt Method
+var output = document.getElementById("outputText");
+var a = "My Output <br>";
+
+document.getElementById("btn").onclick = function() {
+    var myVal = document.getElementById("myVal").value;
+    console.log("Gets Input");
+    if (myVal >= b){
+        console.log("Greater than b value");
+        a = a + "myVal is Greater than b<br>";
     }
-});
+    a = a + "myVal is " + myVal + "<br>";
+    a = a + "b is " + myVal + "<br>";
+    a = a + Math.ceil(Math.random()*100) + "<br>";
+    output.innerHTML = a; // Math.floor (Rounded Numbers)
+};
