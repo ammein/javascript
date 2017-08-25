@@ -284,8 +284,8 @@
 
 
 // Javascript Operators dynamic updates
-var a = 5;
-var b = a + 10;
+var a = 0;
+var b = a++;
 
 var output = document.getElementById("output");
 var btn1 = document.getElementById('btn1');
@@ -314,9 +314,39 @@ console.log(cat && dog); //return last string line of code
 console.log(cat || dog); //return top string line of code (NOT value)
 
 // Conditional Statements Else If
-var textOutput = document.getElementById("outputText" + "<br>");
+//var textOutput = document.getElementById("outputText");
+//var a = 1 ;
+//
+//document.getElementById("btn").addEventListener("click" , function(){
+//    var myVal = document.getElementById("numA").value;
+//    if (myVal=="red" || myVal == a){
+//        myVal = "Wow its red or equal to the value of a :)";
+//    } else {
+//        myVal = "Are you sure you are not entering 'red' instead of " + "'" + myVal + "'" + "? <br>";
+//    }
+//        textOutput.innerHTML =  myVal;    
+//}); // Awesomeeeeeeeeeeeeee
+
+
+// Javascript Looping
+var textOutput = document.getElementById("outputText");
+var a = 1 ;
 
 document.getElementById("btn").addEventListener("click" , function(){
     var myVal = document.getElementById("numA").value;
-    textOutput.innerHTML =  myVal;
+    if (myVal=="red" || myVal == a){
+        myVal = "Wow its red or equal to the value of a :)";
+    } else {
+        myVal = "Are you sure you are not entering 'red' instead of " + "'" + myVal + "'" + "? <br>";
+    }
+//    var i = 0;
+//    while (i<=5){
+//        myVal = myVal + i + ". again ! <br>";
+//        i++;
+//    }
+    
+    for(i=0; i<5 ; i++){
+        myVal += i + ". Repeat me <br>";
+        textOutput.innerHTML = myVal;
+    }
 });
