@@ -3,24 +3,46 @@
 
 <head>
 
-  <meta charset="utf-8">
-<title>Example Page</title>
+    <meta charset="utf-8">
+    <title>Example Page</title>
 
 
 </head>
+
 <body>
+    <style>
+        .btn{
+            font-family: 'fira sans' , sans-serif;
+            font-size: 24px;
+            padding: 2 2;
+        }   
+        .output {
+            font-size: 14px;
+            text-align: center;
+            list-style: disc;
+            color: #585858;
+        }
+    </style>
+    <div id="wrapper">
+        <div id="btn1" class="btn"> Click Me</div>
+        <div id="btn2" class="btn"> Click Me</div>
 
-<div id="btn1" class="btn"> Click Me</div>
-<div id="btn2" class="btn"> Click Me</div>
+        <div id="output">nothing</div>
 
-<div id="output">nothing</div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+    </div>
+    
+    <div id="content">
+        <input type="text" name="numA" id="numA" value="default">
+        <button id="btn" class="btn">Update</button>
+        <div id="outputText"></div>
+    </div>
 
-<ul>
-    <li>One</li>
-    <li>Two</li>
-</ul>
-<div id="example"></div>
-<script type="text/javascript" src="index.js"></script>
+    <div id="example"></div>
+    <script type="text/javascript" src="index.js"></script>
 
 </body>
 
