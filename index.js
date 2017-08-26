@@ -267,8 +267,8 @@
 //function allFun() {
 //    this.style.backgroundColor = "pink";
 //}
-//
-//
+
+
 //// Create new elements using Javascript
 //var myEle = document.createElement("h1");
 //var myContent = document.createTextNode("New element");
@@ -384,20 +384,22 @@
 
 
 //Javascript Date and Time
-//var outputDate = document.getElementById("outputText");
-//var a = "My Output<br>";
-//
-//document.getElementById("btn").onclick = function () {
-//    // Fetch Current Date , Year , Time and Time Zone
-//    var myDate = new Date();
-//    console.log("Fetching Date");
-//    //    Date.now()
-//    var hoursNight = "PM";
-//    var hoursNight = "AM";
-////    outputDate.innerHTML = myDate.getHours();
-////    outputDate.innerHTML ="Day " + myDate.getDay();
-//    console.log("Successful Output Date");
-//};
+'use strict';
+var outputDate = document.getElementById("outputText");
+var a = "My Output<br>";
+
+document.getElementById("btn").onclick = function () {
+    // Fetch Current Date , Year , Time and Time Zone
+    var myDate = new Date();
+    console.log("Fetching Date");
+    console.log(myDate.getHours());
+    //    Date.now()
+    var ampm = (myDate.getHours() >= 12) ? "PM" : "AM";
+    var hours = (myDate.getHours() >= 12) ? myDate.getHours()-12 : myDate.getHours();
+outputDate.innerHTML = hours + " " + ampm;
+//    outputDate.innerHTML ="Day " + myDate.getDay();
+console.log("Successful Output Date");
+};
 
 // Intro to Javascript Objects (JSON)
 //var outputJSON = document.getElementById("outputText");
@@ -414,33 +416,54 @@
 
 
 //JSON Object Array Multiple Items
-var outputJSON = document.getElementById("outputText");
-var a = "My Output<br>";
-var myObj = {
-    "students": [{
-        "firstName": "Laurence",
-        "company": "Discovery Vip"
-        }, {
-        "firstName": "Mike",
-        "company": "Unemployed"
-        }, {
-        "firstName": "Bob",
-        "company": "UI/UX Designer"
-        }]
-};
-console.log("Recorded Object");
-
-document.getElementById("btn").onclick = function () {
-
-    for (i = 0; i < myObj.students.length; i++) {
-        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
-        console.log("Successful Output Object");
-    }
-
-};
-
-
+//var outputJSON = document.getElementById("outputText");
+//var a = "My Output<br>";
+//var myObj = {
+//    "students": [{
+//        "firstName": "Laurence",
+//        "company": "Discovery Vip"
+//        }, {
+//        "firstName": "Mike",
+//        "company": "Unemployed"
+//        }, {
+//        "firstName": "Bob",
+//        "company": "UI/UX Designer"
+//        }]
+//};
+//console.log("Recorded Object");
+//
+//document.getElementById("btn").onclick = function () {
+//
+//    for (i = 0; i < myObj.students.length; i++) {
+//        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
+//        console.log("Successful Output Object");
+//    }
+//
+//};
 
 
-
-
+// create JSON/make AJAX Call
+//var outputJSON = document.getElementById("outputText");
+//var a = new XMLHttpRequest();
+//console.log("Recorded Object from MyJSON");
+//a.onreadystatechange = function () {
+//    if (this.readyState == 4) {
+//        var myObj = this.response.Text;
+//        for (i = 0; i < myObj.students.length; i++) {
+//            outputJSON.innerHTML += myObj[i].firstName + " " + myObj[i].company + "<br>";
+//            console.log("Successful Output Object");
+//        }
+//    }
+//    console.log(myObj);
+//}
+//
+//a.open("GET", "https://api.myjson.com/bins/11do11", true)
+//a.send();
+//document.getElementById("btn").onclick = function () {
+//
+//    for (i = 0; i < myObj.students.length; i++) {
+//        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
+//        console.log("Successful Output Object");
+//    }
+//
+//};
