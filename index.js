@@ -284,35 +284,35 @@
 
 
 // Javascript Operators dynamic updates
-'use strict';
-var kosong = 0;
-var tambah = kosong++;
-
-var output = document.getElementById("output");
-var btn1 = document.getElementById('btn1');
-var btn2 = document.getElementById('btn2');
-
-
-btn1.onclick = function() {
-    kosong = kosong + 1;
-    output.innerHTML = tambah + kosong;
-}
-btn2.onclick = function() {
-    kosong--;
-    output.innerHTML = tambah + kosong;
-}
-
-var c = false;
-var d = true;
-var e = !(c && d)? "This was true , hooray !" : "was False , Baddddd :("; // So cool , right ?
-console.log(e); // return false
-
-var cat = "cat";
-var dog = "dog";
-
-console.log(cat && dog); //return last string line of code
-
-console.log(cat || dog); //return top string line of code (NOT value)
+//'use strict';
+//var kosong = 0;
+//var tambah = kosong++;
+//
+//var output = document.getElementById("output");
+//var btn1 = document.getElementById('btn1');
+//var btn2 = document.getElementById('btn2');
+//
+//
+//btn1.onclick = function() {
+//    kosong = kosong + 1;
+//    output.innerHTML = tambah + kosong;
+//}
+//btn2.onclick = function() {
+//    kosong--;
+//    output.innerHTML = tambah + kosong;
+//}
+//
+//var c = false;
+//var d = true;
+//var e = !(c && d)? "This was true , hooray !" : "was False , Baddddd :("; // So cool , right ?
+//console.log(e); // return false
+//
+//var cat = "cat";
+//var dog = "dog";
+//
+//console.log(cat && dog); //return last string line of code
+//
+//console.log(cat || dog); //return top string line of code (NOT value)
 
 // Conditional Statements Else If
 //var textOutput = document.getElementById("outputText");
@@ -364,20 +364,83 @@ console.log(cat || dog); //return top string line of code (NOT value)
 //};
 
 // ParseInt Method (Change the number into integer)
-var output2 = document.getElementById("outputText");
-var a = "My Output <br>";
-var b = 3;
-document.getElementById("btn").onclick = function() {
-    var myVal = document.getElementById("myVal").value;
-    console.log("Gets Input");
-    myVal = parseInt(myVal);
-    console.log("Begin parseInt");
-    if (myVal > b){
-        console.log("Greater than b value");
-        a = a + "myVal is Greater than b<br>";
-    }
-    a = a + "myVal is " + myVal + "<br>";
-    a = a + "b is " + myVal + "<br>";
-    a = a + Math.ceil(Math.random()*50) + "<br>";
-    output2.innerHTML = a; // Math.floor (Rounded Numbers)
+//var output2 = document.getElementById("outputText");
+//var a = "My Output <br>";
+//var b = 3;
+//document.getElementById("btn").onclick = function() {
+//    var myVal = document.getElementById("myVal").value;
+//    console.log("Gets Input");
+//    myVal = parseInt(myVal);
+//    console.log("Begin parseInt");
+//    if (myVal > b){
+//        console.log("Greater than b value");
+//        a = a + "myVal is Greater than b<br>";
+//    }
+//    a = a + "myVal is " + myVal + "<br>";
+//    a = a + "b is " + myVal + "<br>";
+//    a = a + Math.ceil(Math.random()*50) + "<br>";
+//    output2.innerHTML = a; // Math.floor (Rounded Numbers)
+//};
+
+
+//Javascript Date and Time
+//var outputDate = document.getElementById("outputText");
+//var a = "My Output<br>";
+//
+//document.getElementById("btn").onclick = function () {
+//    // Fetch Current Date , Year , Time and Time Zone
+//    var myDate = new Date();
+//    console.log("Fetching Date");
+//    //    Date.now()
+//    var hoursNight = "PM";
+//    var hoursNight = "AM";
+////    outputDate.innerHTML = myDate.getHours();
+////    outputDate.innerHTML ="Day " + myDate.getDay();
+//    console.log("Successful Output Date");
+//};
+
+// Intro to Javascript Objects (JSON)
+//var outputJSON = document.getElementById("outputText");
+//var a = "My Output<br>";
+//var myObj = {"firstName" : "Laurence" , 
+//             "company" : "Discovery Vip"
+//            };
+//console.log("Recorded Object");
+//
+//document.getElementById("btn").onclick = function() {
+//    outputJSON.innerHTML = myObj.firstName + " " + myObj.company;
+//    console.log("Successful Output Object");
+//};
+
+
+//JSON Object Array Multiple Items
+var outputJSON = document.getElementById("outputText");
+var a = "My Output<br>";
+var myObj = {
+    "students": [{
+        "firstName": "Laurence",
+        "company": "Discovery Vip"
+        }, {
+        "firstName": "Mike",
+        "company": "Unemployed"
+        }, {
+        "firstName": "Bob",
+        "company": "UI/UX Designer"
+        }]
 };
+console.log("Recorded Object");
+
+document.getElementById("btn").onclick = function () {
+
+    for (i = 0; i < myObj.students.length; i++) {
+        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
+        console.log("Successful Output Object");
+    }
+
+};
+
+
+
+
+
+
