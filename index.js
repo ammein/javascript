@@ -444,6 +444,33 @@ console.log("Successful Output Date");
 
 
 // create JSON/make AJAX Call/JSON parse as Javascript Object
+//var outputJSON = document.getElementById("outputText");
+//var a = new XMLHttpRequest();
+//console.log("Recorded Object from MyJSON");
+//a.onreadystatechange = function () {
+//    if (this.readyState == 4) {
+//        var myObj = JSON.parse(this.responseText);
+//        console.log(myObj);
+//        for (var i = 0; i < myObj.length; i++) {
+//            outputJSON.innerHTML += myObj[i].firstName + " " + myObj[i].company + "<br>";
+//            console.log("Successful Output Object");
+//        }
+//    }
+//    console.log(myObj);
+//}
+//
+//a.open("GET", "https://api.myjson.com/bins/11do11", true)
+//a.send();
+//document.getElementById("btn").onclick = function () {
+//
+//    for (i = 0; i < myObj.students.length; i++) {
+//        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
+//        console.log("Successful Output Object");
+//    }
+//
+//};
+
+// Javascript For in Loop
 var outputJSON = document.getElementById("outputText");
 var a = new XMLHttpRequest();
 console.log("Recorded Object from MyJSON");
@@ -451,7 +478,7 @@ a.onreadystatechange = function () {
     if (this.readyState == 4) {
         var myObj = JSON.parse(this.responseText);
         console.log(myObj);
-        for (var i = 0; i < myObj.length; i++) {
+        for (var i in myObj) {
             outputJSON.innerHTML += myObj[i].firstName + " " + myObj[i].company + "<br>";
             console.log("Successful Output Object");
         }
@@ -461,11 +488,3 @@ a.onreadystatechange = function () {
 
 a.open("GET", "https://api.myjson.com/bins/11do11", true)
 a.send();
-document.getElementById("btn").onclick = function () {
-
-    for (i = 0; i < myObj.students.length; i++) {
-        outputJSON.innerHTML += myObj.students[i].firstName + " " + myObj.students[i].company + "<br>";
-        console.log("Successful Output Object");
-    }
-
-};
