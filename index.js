@@ -395,8 +395,9 @@ document.getElementById("btn").onclick = function () {
     console.log(myDate.getHours());
     //    Date.now()
     var ampm = (myDate.getHours() >= 12) ? "PM" : "AM";
-    var hours = (myDate.getHours() >= 12) ? myDate.getHours()-12 : myDate.getHours();
-outputDate.innerHTML = hours + " " + ampm;
+    var hours = (myDate.getHours() >= 13) ? myDate.getHours()-12 : myDate.getHours();
+    var minutes = myDate.getMinutes();
+outputDate.innerHTML = hours + " " + " : " + minutes + " " + ampm ;
 //    outputDate.innerHTML ="Day " + myDate.getDay();
 console.log("Successful Output Date");
 };
