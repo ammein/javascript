@@ -364,10 +364,10 @@
 //};
 
 // ParseInt Method (Change the number into integer)
-//var output2 = document.getElementById("outputText");
-//var a = "My Output <br>";
-//var b = 3;
-//document.getElementById("btn").onclick = function() {
+// var output2 = document.getElementById("outputText");
+// var a = "My Output <br>";
+// var b = 3;
+// document.getElementById("btn").onclick = function() {
 //    var myVal = document.getElementById("myVal").value;
 //    console.log("Gets Input");
 //    myVal = parseInt(myVal);
@@ -380,7 +380,8 @@
 //    a = a + "b is " + myVal + "<br>";
 //    a = a + Math.ceil(Math.random()*50) + "<br>";
 //    output2.innerHTML = a; // Math.floor (Rounded Numbers)
-//};
+// };
+
 
 
 //Javascript Date and Time
@@ -402,18 +403,18 @@ outputDate.innerHTML = hours + " " + " : " + minutes + " " + ampm ;
 console.log("Successful Output Date");
 };
 
-// Intro to Javascript Objects (JSON)
-//var outputJSON = document.getElementById("outputText");
-//var a = "My Output<br>";
-//var myObj = {"firstName" : "Laurence" , 
+// // Intro to Javascript Objects (JSON)
+// var outputJSON = document.getElementById("outputText");
+// var a = "My Output<br>";
+// var myObj = {"firstName" : "Laurence" , 
 //             "company" : "Discovery Vip"
 //            };
-//console.log("Recorded Object");
-//
-//document.getElementById("btn").onclick = function() {
+// console.log("Recorded Object");
+
+// document.getElementById("btn").onclick = function() {
 //    outputJSON.innerHTML = myObj.firstName + " " + myObj.company;
 //    console.log("Successful Output Object");
-//};
+// };
 
 
 //JSON Object Array Multiple Items
